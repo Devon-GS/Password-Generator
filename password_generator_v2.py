@@ -1,10 +1,10 @@
-import random
+from random import sample
 import string
 
 def generate_password(user_input):
     characters = string.printable[:95]*10
-    get_random_char = (random.sample(characters, user_input))
-    shuffle_char = random.sample(get_random_char, user_input)
+    get_random_char = sample(characters, user_input)
+    shuffle_char = sample(get_random_char, user_input)
     password = " ".join(shuffle_char).replace(" ","")
     print(f"You Generated pasword is: {password}")
 
